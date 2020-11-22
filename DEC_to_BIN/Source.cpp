@@ -1,24 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-struct pupzz
+struct patz
 {
 	int i = 0;
-}zz;
+}ez;
 
 void covertBin(int dec)
 {
-	
 	static int numBin[128];
 	while (dec != 0)
 	{
-		numBin[zz.i] = dec % 2;
+		numBin[ez.i] = dec % 2;
 		dec /= 2;
-		zz.i++;
+		ez.i++;
 	}
-	for (zz.i; zz.i >= 0; zz.i--)
+	for (ez.i; ez.i >= 0; ez.i--)
 	{
-		printf("%d", numBin[zz.i]);
+		printf("%d", numBin[ez.i]);
 	}
 }
 
@@ -27,7 +26,10 @@ int main()
 	int numDec;
 	printf("Enter positive integer : ");
 	scanf("%d", &numDec);
-	covertBin(numDec);
-
+	if (numDec > 0 || numDec != NULL)
+	{
+		covertBin(numDec);
+	}
+	
 	return 0;
 }
